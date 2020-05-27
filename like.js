@@ -1,4 +1,6 @@
 var confirmBox = confirm('Start right swiper ?');
+var seed = 1;
+var randNormTime = 3412
 var count = 1;
 var like = function(){
     if (confirmBox){
@@ -6,6 +8,9 @@ var like = function(){
       console.log('Liked ' + count);						  
         count++;
     };
-    setTimeout(like, 500);
+    var x = Math.abs(Math.sin(seed++) * randNormTime);
+    console.log('time to swipe ' + x); 
+    setTimeout(like, x );
 };
-setTimeout(like, 500);
+
+setTimeout(like, 300 );
